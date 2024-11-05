@@ -1,0 +1,45 @@
+---
+import SupportButton from "./SupportButton.astro";
+---
+
+<nav>
+  <a href="/about">About</a>
+  <a href="/families">Families We Help</a>
+  <a href="/events">Events</a>
+  <a href="/contact">Contact</a>
+  <span><SupportButton /></span>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+    gap: 8px;
+  }
+
+  a {
+    color: var(--color-black);
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    text-decoration: none;
+    padding: 14px 12px;
+    border-bottom: solid 2px transparent;
+  }
+
+  a:hover {
+    border-bottom-color: var(--color-black);
+  }
+
+  span {
+    padding-left: 20px;
+  }
+
+  @media (max-width: 1000px) {
+    nav {
+      display: none;
+    }
+  }
+</style>

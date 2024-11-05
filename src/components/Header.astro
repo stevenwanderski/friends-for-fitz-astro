@@ -1,0 +1,29 @@
+---
+import Logo from "./Logo.astro";
+import MobileNav from "./MobileNav.astro";
+import MobileMenu from "./MobileMenu.astro";
+import Nav from "./Nav.astro";
+---
+
+<header x-data="{ menu: false }">
+  <div class="container-inner">
+    <Logo />
+    <Nav />
+    <MobileNav />
+  </div>
+
+  <MobileMenu />
+</header>
+
+<style>
+  header {
+    background-color: var(--color-green-pale);
+    padding: 20px;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>

@@ -1,0 +1,25 @@
+<div @click="menu = !menu" class="line-wrap">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+
+<style>
+  .line-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 40px;
+  }
+
+  .line {
+    height: 3px;
+    background-color: var(--color-black);
+  }
+
+  @media (min-width: 1000px) {
+    .line-wrap, nav {
+      display: none;
+    }
+  }
+</style>
