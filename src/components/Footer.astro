@@ -1,0 +1,124 @@
+---
+import Logo from "./Logo.astro";
+import LogoFacebook from "../images/logo-facebook.png";
+---
+
+<footer>
+  <div class="container-inner">
+    <div class="top">
+      <Logo />
+
+      <nav>
+        <a href="/about">About</a>
+        <a href="/families">Families We Help</a>
+        <a href="/events">Events</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="middle">
+      <div class="facebook">
+        <img src={LogoFacebook.src} alt="">
+      </div>
+
+      <p class="text-medium">
+        We are a nonprofit dedicated to supporting local families in need. Together, we make a meaningful difference, one family at a time.
+      </p>
+    </div>
+
+    <div class="bottom">
+      <div>&copy; 2024. All rights reserved.</div>
+      <div>Designed by <a href="#">Happy Code</a></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: var(--color-yellow-pale);
+    padding: 80px 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav a {
+    color: var(--color-black);
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    text-decoration: none;
+  }
+
+  p {
+    max-width: 480px;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: solid 1px var(--color-gray-light);
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 32px;
+  }
+
+  .bottom a {
+    text-decoration: none;
+    color: var(--color-green);
+  }
+
+  .bottom a:hover {
+    text-decoration: underline;
+  }
+
+  .facebook img {
+    width: 50px;
+  }
+
+  @media (min-width: 1000px) {
+    .top {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    .middle {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .facebook {
+      order: 1;
+    }
+  }
+</style>
