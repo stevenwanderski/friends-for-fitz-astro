@@ -1,0 +1,76 @@
+---
+import ArrowButton from './ArrowButton.astro';
+import HeadingLabel from './HeadingLabel.astro';
+---
+
+<div class="wrap">
+  <div class="container-inner main">
+    <div class="content">
+      <HeadingLabel text="Who We Are" />
+
+      <h2>We are a nonprofit created in memory of Bill Fitzgibbons.</h2>
+
+      <p class="text-medium">
+        Established by friends and family, the nonprofit is dedicated to supporting local families facing hardships by providing various forms of assistance. Through events like our annual summer festival, we raise funds to make a positive impact in the lives of families who could use a helping hand.
+      </p>
+
+      <ArrowButton text="Friends for Fitz Fest 2025" />
+    </div>
+
+    <div class="image-wrap">
+      <div class="image"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrap {
+    padding: 72px 20px;
+  }
+
+  h2 {
+    margin: 40px 0 12px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  .content {
+    margin-bottom: 72px;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 498px;
+    height: 300px;
+    background-image: url('https://happy-code.imgix.net/fitz-sibs.jpg?w=500');
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+  }
+
+  @media (min-width: 1000px) {
+    .main {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      padding: 72px 0;
+      align-items: center;
+      /* gap: 32px; */
+    }
+
+    .image-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .image {
+      width: 498px;
+      height: 472px;
+      background-image: url('https://happy-code.imgix.net/fitz-sibs.jpg?w=500');
+      background-size: cover;
+      background-position: center center;
+      border-radius: 20px;
+    }
+  }
+</style>

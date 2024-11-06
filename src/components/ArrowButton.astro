@@ -1,0 +1,22 @@
+---
+const { text, href } = Astro.props;
+import ArrowSvg from '../images/icon-arrow.svg';
+---
+
+<a href={href} class="button">
+  {text} <img src={ArrowSvg.src} />
+</a>
+
+<style>
+  a {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    display: inline-flex;
+    gap: 8px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+</style>
