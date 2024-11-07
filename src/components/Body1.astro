@@ -4,21 +4,32 @@ import HeadingLabel from './HeadingLabel.astro';
 ---
 
 <div class="wrap">
-  <div class="container-inner main">
-    <div class="content">
-      <HeadingLabel text="Who We Are" />
+  <div class="container-inner">
+    <div class="main">
+      <div class="content">
+        <HeadingLabel text="Who We Are" />
 
-      <h2>We are a nonprofit created in memory of Bill Fitzgibbons.</h2>
+        <h2>We are a nonprofit created in memory of Bill Fitzgibbons.</h2>
 
-      <p class="text-medium">
-        Established by friends and family, the nonprofit is dedicated to supporting local families facing hardships by providing various forms of assistance. Through events like our annual summer festival, we raise funds to make a positive impact in the lives of families who could use a helping hand.
-      </p>
+        <p class="text-medium">
+          Established by friends and family, the nonprofit is dedicated to supporting local families facing hardships by providing various forms of assistance. Through events like our annual summer festival, we raise funds to make a positive impact in the lives of families who could use a helping hand.
+        </p>
 
-      <ArrowButton text="Friends for Fitz Fest 2025" />
-    </div>
+        <ArrowButton text="Friends for Fitz Fest 2025" />
+      </div>
 
-    <div class="image-wrap">
-      <div class="image"></div>
+      <div class="image-wrap">
+        <!-- <div class="image"></div> -->
+
+        <img
+          class="ix-embed-image image"
+          loading="lazy"
+          fetchpriority="high"
+          alt=""
+          srcset="https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=100 100w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=116 116w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=134 134w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=156 156w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=182 182w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=210 210w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=244 244w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=282 282w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=328 328w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=380 380w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=442 442w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=512 512w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=594 594w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=688 688w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=798 798w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=926 926w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=1074 1074w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=1246 1246w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=1446 1446w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=1678 1678w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=1946 1946w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=2258 2258w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=2618 2618w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=3038 3038w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=3524 3524w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=4088 4088w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=4742 4742w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=5500 5500w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=6380 6380w, https://happy-code.imgix.net/fitz-sibs.jpg?auto=format,compress&w=7400 7400w"
+          src="https://happy-code.imgix.net/fitz-sibs.jpg?ixembed=1730983632748&auto=format,compress"
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -37,16 +48,12 @@ import HeadingLabel from './HeadingLabel.astro';
   }
 
   .content {
-    margin-bottom: 72px;
+    max-width: 500px;
   }
 
   .image {
     width: 100%;
     max-width: 498px;
-    height: 300px;
-    background-image: url('https://happy-code.imgix.net/fitz-sibs.jpg?w=500');
-    background-size: cover;
-    background-position: center center;
     border-radius: 20px;
   }
 
@@ -56,21 +63,16 @@ import HeadingLabel from './HeadingLabel.astro';
       grid-template-columns: repeat(2, 50%);
       padding: 72px 0;
       align-items: center;
-      /* gap: 32px; */
+    }
+
+    .content {
+      max-width: 100%;
+      padding-right: 32px;
     }
 
     .image-wrap {
       display: flex;
       justify-content: flex-end;
-    }
-
-    .image {
-      width: 498px;
-      height: 472px;
-      background-image: url('https://happy-code.imgix.net/fitz-sibs.jpg?w=500');
-      background-size: cover;
-      background-position: center center;
-      border-radius: 20px;
     }
   }
 </style>
