@@ -1,12 +1,14 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import LogoBlack from "../images/logo-black.png";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={LogoBlack.src} />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
@@ -19,5 +21,6 @@ import Header from "../components/Header.astro";
 	<body>
     <Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
