@@ -1,12 +1,27 @@
 ---
 import SupportButton from "./SupportButton.astro";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
 <nav>
-  <a href="/about">About</a>
-  <a href="/families">Families We Help</a>
-  <a href="/events">Events</a>
-  <a href="/contact">Contact</a>
+  <a href="/about" class:list={[{active: currentPath == 'about'}]}>
+    About
+  </a>
+
+  <a href="/families" class:list={[{active: currentPath == 'families'}]}>
+    Families We Help
+  </a>
+
+  <a href="/events" class:list={[{active: currentPath == 'events'}]}>
+    Events
+  </a>
+
+  <a href="/contact" class:list={[{active: currentPath == 'contact'}]}>
+    Contact
+  </a>
+
   <span><SupportButton /></span>
 </nav>
 
@@ -29,7 +44,7 @@ import SupportButton from "./SupportButton.astro";
     border-bottom: solid 2px transparent;
   }
 
-  a:hover {
+  a:hover, a.active {
     border-bottom-color: var(--color-black);
   }
 
