@@ -1,0 +1,88 @@
+---
+import SupportButton from "./SupportButton.astro";
+import Button from "./Button.astro";
+---
+
+<div class="wrap">
+  <div class="container-inner">
+    <div class="main">
+      <div class="content">
+        <h3>You can help by providing a contribution.</h3>
+
+        <p class="text-large">
+          Your contribution directly impacts families in need by providing essential support during challenging times.
+        </p>
+      </div>
+
+      <div class="actions">
+        <SupportButton />
+        <Button text="Purchase a Hat" href="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h3 {
+    color: var(--color-white);
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 38px;
+  }
+
+  p {
+    color: var(--color-green-pale);
+    text-align: center;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 48px;
+  }
+
+  .wrap {
+    background: #269443;
+    padding: 80px 20px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  @media (min-width: 1000px) {
+    h3 {
+      font-size: 60px;
+      line-height: 66px;
+    }
+
+    .wrap {
+      background-image: url('../images/bg-donate-cta.jpg');
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 720px;
+      gap: 8px;
+    }
+  }
+</style>

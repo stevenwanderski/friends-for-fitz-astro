@@ -1,0 +1,85 @@
+---
+import ArrowButton from './ArrowButton.astro';
+import HeadingLabel from './HeadingLabel.astro';
+---
+
+<div class="wrap">
+  <div class="container-inner">
+    <div class="main">
+      <div class="content">
+        <HeadingLabel text="Families We've Helped" />
+
+        <h2>We have provided assistance to more than 10 local families this year.</h2>
+
+        <p class="text-medium">
+          Friends for Fitz provides support to local families facing unexpected challenges. With the generosity of our community, we are able to step in and offer assistance during difficult times. Each family we help reflects our mission to bring stability and hope to those in need, and we are proud to make a difference, one family at a time.
+        </p>
+
+        <ArrowButton text="Read the Higgins Family Story" href="/families" />
+      </div>
+
+      <div class="image-wrap">
+        <img
+          class="ix-embed-image image"
+          loading="lazy"
+          fetchpriority="high"
+          alt=""
+          srcset="https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=100 100w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=116 116w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=134 134w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=156 156w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=182 182w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=210 210w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=244 244w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=282 282w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=328 328w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=380 380w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=442 442w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=512 512w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=594 594w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=688 688w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=798 798w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=926 926w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=1074 1074w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=1246 1246w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=1446 1446w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=1678 1678w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=1946 1946w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=2258 2258w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=2618 2618w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=3038 3038w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=3524 3524w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=4088 4088w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=4742 4742w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=5500 5500w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=6380 6380w, https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=7400 7400w"
+          src="https://happy-code.imgix.net/higgins-fam.jpg?ixembed=1731003579407&auto=format,compress"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrap {
+    padding: 72px 20px;
+  }
+
+  h2 {
+    margin: 40px 0 12px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  .content {
+    max-width: 500px;
+    order: 0;
+  }
+
+  .main {
+    display: grid;
+    gap: 72px;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 498px;
+    border-radius: 20px;
+  }
+
+  .image-wrap {
+    order: 1;
+  }
+
+  @media (min-width: 1000px) {
+    .main {
+      grid-template-columns: 498px 1fr;
+      align-items: center;
+      gap: 112px;
+    }
+
+    .content {
+      max-width: 100%;
+      order: 1;
+    }
+
+    .image-wrap {
+      display: flex;
+      order: 0;
+    }
+  }
+</style>
