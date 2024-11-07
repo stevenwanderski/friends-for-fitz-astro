@@ -1,7 +1,7 @@
 ---
 import SupportButton from "./SupportButton.astro";
 import Button from "./Button.astro";
-import ImageGrid from "./ImageGrid.astro";
+import ImageGrid from "../images/pic-hero-grid.png";
 ---
 
 <div class="outer">
@@ -20,7 +20,7 @@ import ImageGrid from "./ImageGrid.astro";
     </div>
 
     <div class="image-grid">
-      <ImageGrid />
+      <img src={ImageGrid.src} alt="">
     </div>
   </div>
 </div>
@@ -74,18 +74,18 @@ import ImageGrid from "./ImageGrid.astro";
     }
 
     .main {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       align-items: center;
-      justify-content: space-between;
-      gap: 64px;
-    }
-
-    .content {
-      flex-shrink: 0;
+      gap: 32px;
     }
 
     .image-grid {
       display: block;
+    }
+
+    img {
+      width: 100%;
     }
   }
 </style>
