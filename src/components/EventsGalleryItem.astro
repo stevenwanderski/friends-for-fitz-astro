@@ -1,0 +1,15 @@
+---
+const { src } = Astro.props;
+---
+
+<div>
+  <a href={`${src}?auto=format,compress`} data-lightbox="gallery">
+    <img src={`${src}?auto=format,compress&w=300&h=300&fit=crop`} alt="">
+  </a>
+</div>
+
+<style>
+  img {
+    max-width: 174px;
+  }
+</style>
