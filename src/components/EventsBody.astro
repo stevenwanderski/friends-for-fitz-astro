@@ -1,11 +1,127 @@
+---
+import HeadingLabel from "./HeadingLabel.astro";
+import IconCalendar from "../images/icon-calendar.svg";
+import IconClock from "../images/icon-clock.svg";
+import IconMapPin from "../images/icon-map-pin.svg";
+import ImageGrid from "../images/pic-hero-grid.png";
+---
+
 <div class="wrap">
   <div class="container-inner">
-    <h2>Events yo.</h2>
+    <div class="main">
+      <div class="content">
+        <div class="heading">
+          <HeadingLabel text="Event Info" />
+        </div>
+
+        <div class="event">
+          <div class="date item">
+            <img src={IconCalendar.src} class="icon" alt="">
+
+            <span>June 28, 2025</span>
+          </div>
+
+          <div class="time item">
+            <img src={IconClock.src} class="icon" alt="">
+
+            <div class="value">2:00pm - 10:00pm</div>
+          </div>
+
+          <div class="location item">
+            <img src={IconMapPin.src} class="icon" alt="">
+
+            <div class="value">
+              St. Christina Ball Fields<br>
+              11101 S Central Park Ave<br>
+              Chicago, IL 60655
+            </div>
+          </div>
+        </div>
+
+        <hr class="line">
+
+        <p class="text-medium">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam nisi quos harum alias maxime explicabo, aliquid animi quae, aliquam, fugit iure? Eveniet molestias soluta dignissimos? Nemo dolores repellat consectetur optio!
+        </p>
+      </div>
+
+      <div class="image-wrap">
+        <img src={ImageGrid.src} alt="">
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
   .wrap {
-    padding: 20px;
+    padding: 72px 20px;
   }
+
+  .item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .date span {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+  }
+
+  .time .value,
+  .location .value {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  .heading {
+    margin-bottom: 32px;
+  }
+
+  .event {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .icon {
+    margin-top: 4px;
+  }
+
+  .line {
+    border: 0;
+    border-bottom: solid 2px var(--color-gray-light);
+    margin: 64px 0;
+  }
+
+  .image-wrap {
+    display: none;
+  }
+
+  .content {
+    max-width: 600px;
+  }
+
+  .main {
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: 1000px) {
+    .main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 144px;
+    }
+
+    .image-wrap {
+      display: block;
+    }
+
+    .image-wrap img {
+      width: 100%;
+    }
+  }
+
 </style>

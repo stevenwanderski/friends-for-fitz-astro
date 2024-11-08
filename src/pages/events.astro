@@ -2,16 +2,22 @@
 import Layout from '../layouts/Layout.astro';
 import InteriorHeader from '../components/InteriorHeader.astro';
 import EventsBody from '../components/EventsBody.astro';
+import EventsGallery from '../components/EventsGallery.astro';
 import DonateCta from '../components/DonateCta.astro';
 ---
 
 <Layout>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 	<InteriorHeader
 		title="Friends for Fitz Fest 2025"
 		body="Join us for a day filled with fun, community, and purpose. Together, we'll celebrate and raise funds to support local families facing challenging times."
 	/>
 
 	<EventsBody />
+	<EventsGallery />
 
 	<DonateCta />
 </Layout>
