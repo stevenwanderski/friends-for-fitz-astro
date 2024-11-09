@@ -2,17 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import InteriorHeader from '../components/InteriorHeader.astro';
 import DonateCta from '../components/DonateCta.astro';
+import SupportBody from '../components/SupportBody.astro';
 ---
 
 <Layout>
-	<InteriorHeader
-		title="Support Us"
-		body="Make a difference by supporting families in need within our community."
-	/>
+  <InteriorHeader
+    title="Support Us"
+    body="Make a difference by supporting families in need within our community."
+  />
 
-	<div class="container-inner">
-		<h2>Support.</h2>
-	</div>
+  <SupportBody />
 
-	<DonateCta />
+  <DonateCta />
 </Layout>

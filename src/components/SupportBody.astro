@@ -1,0 +1,102 @@
+---
+import IconHeart from "../images/icon-heart.svg";
+import IconCart from "../images/icon-cart.svg";
+---
+
+<div class="wrap">
+  <div class="container-inner">
+    <div class="header">
+      <h2>Your contribution goes toward helping local families.</h2>
+
+      <p class="text-medium">
+        Every contribution directly supports families facing difficult circumstances in our community. We provide essential assistance such as medical bills, housing expenses, and everyday necessities. By donating, you play a crucial role in ensuring that these families receive the help they need to regain stability and hope.
+      </p>
+    </div>
+
+    <div class="actions">
+      <div class="item">
+        <img src={IconHeart.src} class="icon">
+
+        <div class="title">Make a Donation</div>
+
+        <p class="text-medium">
+          You will be redirected to a secure page hosted by Stripe.
+        </p>
+
+        <div class="action">
+          <a href="https://stripe.com" class="button">
+            Click to Donate
+          </a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src={IconCart.src} class="icon">
+
+        <div class="title">Purchase a Hat</div>
+
+        <p class="text-medium">
+          You will be redirected to a secure checkout page using Stripe.
+        </p>
+
+        <div class="action">
+          <a href="https://stripe.com" class="button">
+            Click to Make a Purchase
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h2 {
+    margin-bottom: 8px;
+  }
+
+  .wrap {
+    padding: 72px 20px;
+  }
+
+  .header {
+    margin-bottom: 72px;
+    max-width: 700px;
+  }
+
+  .item {
+    background: #f9f9f9;
+    padding: 32px;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .icon {
+    margin-bottom: 16px;
+  }
+
+  .button {
+    background: var(--color-yellow);
+    color: var(--color-black);
+  }
+
+  .actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 64px;
+  }
+
+  .actions p {
+    margin-bottom: 32px;
+    max-width: 322px;
+  }
+
+  .actions .text-medium {
+    line-height: 26px;
+  }
+</style>
