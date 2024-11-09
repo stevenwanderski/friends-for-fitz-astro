@@ -1,5 +1,4 @@
 ---
-import ContactForm from "./ContactForm.astro";
 import IconEmail from "../images/icon-email.svg";
 import IconPhone from "../images/icon-phone.svg";
 ---
@@ -16,9 +15,7 @@ import IconPhone from "../images/icon-phone.svg";
           </p>
         </div>
 
-        <div class="form">
-          <ContactForm />
-        </div>
+        <slot />
       </div>
 
       <div class="info">
