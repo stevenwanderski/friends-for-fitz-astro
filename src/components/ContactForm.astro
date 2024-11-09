@@ -1,0 +1,55 @@
+<form action="">
+  <div class="content">
+    <div class="form-item">
+      <label for="Name">Name</label>
+      <input type="text" name="Name" id="Name" required>
+    </div>
+
+    <div class="form-item">
+      <label for="Email">Email</label>
+      <input type="email" name="Email" id="Email" required>
+    </div>
+
+    <div class="form-item">
+      <label for="Message">Message</label>
+      <textarea name="Message" id="Message" required></textarea>
+    </div>
+
+    <div class="form-item">
+      <button class="button">Submit</button>
+    </div>
+  </div>
+</form>
+
+<style>
+  label {
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input, textarea {
+    border-radius: 4px;
+    border: 1px solid #A5A5A5;
+    background: var(--color-white);
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  .content {
+    display: grid;
+    gap: 24px;
+    max-width: 600px;
+  }
+
+  .button {
+    background: var(--color-yellow);
+  }
+</style>

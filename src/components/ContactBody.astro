@@ -1,0 +1,108 @@
+---
+import ContactForm from "./ContactForm.astro";
+import IconEmail from "../images/icon-email.svg";
+import IconPhone from "../images/icon-phone.svg";
+---
+
+<div class="wrap">
+  <div class="container-inner">
+    <div class="main">
+      <div class="content">
+        <div class="header">
+          <h2>Send us a message.</h2>
+
+          <p class="text-medium">
+            We'd love to hear from you! Reach out with any questions, feedback, or to learn more about how you can get involved.
+          </p>
+        </div>
+
+        <div class="form">
+          <ContactForm />
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="item">
+          <img src={IconEmail.src} />
+
+          <div class="label">
+            Email
+          </div>
+
+          <a href="mailto:friends4fitz@gmail.com" class="value">
+            friends4fitz@gmail.com
+          </a>
+        </div>
+
+        <div class="item">
+          <img src={IconPhone.src} />
+
+          <div class="label">
+            Phone
+          </div>
+
+          <a href="tel:773.555.9876" class="value">
+            773.555.9876
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  .wrap {
+    padding: 72px 20px;
+  }
+
+  .header {
+    max-width: 600px;
+    margin-bottom: 36px;
+  }
+
+  .main {
+    display: grid;
+    gap: 64px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+
+  .item img {
+    margin-bottom: 16px;
+  }
+
+  .label {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .value {
+    font-size: 20px;
+    color: var(--color-black);
+  }
+
+  @media (min-width: 1000px) {
+    .main {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+
+    .content {
+      padding-right: 72px;
+      border-right: solid 1px var(--color-gray-light);
+    }
+
+    .info {
+      padding-left: 72px;
+    }
+  }
+</style>
