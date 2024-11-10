@@ -34,13 +34,25 @@ import IconPhone from "../images/icon-phone.svg";
         <div class="item">
           <img src={IconPhone.src} />
 
-          <div class="label">
-            Phone
+          <div class="item-group">
+            <div class="label">
+              Erin Cotter
+            </div>
+
+            <a href="tel:773-879-1060" class="value">
+              773-879-1060
+            </a>
           </div>
 
-          <a href="tel:773.555.9876" class="value">
-            773.555.9876
-          </a>
+          <div class="item-group">
+            <div class="label">
+              Katie Ramsden
+            </div>
+
+            <a href="tel:773-879-1058" class="value">
+              773-879-1058
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -74,6 +86,10 @@ import IconPhone from "../images/icon-phone.svg";
 
   .item img {
     margin-bottom: 16px;
+  }
+
+  .item-group {
+    margin-bottom: 32px;
   }
 
   .label {
