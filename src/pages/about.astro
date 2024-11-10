@@ -2,17 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import InteriorHeader from '../components/InteriorHeader.astro';
 import DonateCta from '../components/DonateCta.astro';
+import AboutBody1 from '../components/AboutBody1.astro';
+import AboutBody2 from '../components/AboutBody2.astro';
 ---
 
-<Layout>
+<Layout title="About Us">
 	<InteriorHeader
 		title="About Us"
 		body="Lorem ipsum."
 	/>
 
-	<div class="container-inner">
-		<h2>About.</h2>
-	</div>
+	<AboutBody1 />
+	<AboutBody2 />
 
 	<DonateCta />
 </Layout>

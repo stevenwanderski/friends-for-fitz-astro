@@ -1,0 +1,68 @@
+<div class="wrap">
+  <div class="container-inner">
+    <div class="main">
+      <div class="content">
+        <h2>Friends for Fitz is a 501(c)(3) nonprofit started by the Fitzgibbons family.</h2>
+
+        <p class="text-medium">
+          Established by friends and family, the nonprofit is dedicated to supporting local families facing hardships by providing various forms of assistance. Through events like our annual summer festival, we raise funds to make a positive impact in the lives of families who could use a helping hand.
+        </p>
+      </div>
+
+      <div class="image-wrap">
+        <img
+          class="ix-embed-image image"
+          loading="lazy"
+          fetchpriority="high"
+          alt=""
+          src="https://happy-code.imgix.net/IMG_5528.JPEG?w=1000&fit=crop"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrap {
+    padding: 72px 20px;
+  }
+
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  .content {
+    max-width: 500px;
+  }
+
+  .main {
+    display: grid;
+    gap: 24px;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 498px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: 1000px) {
+    .main {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 72px;
+    }
+
+    .content {
+      max-width: 100%;
+    }
+
+    .image-wrap {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+</style>
