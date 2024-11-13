@@ -1,6 +1,9 @@
 ---
 import IconHeart from "../images/icon-heart.svg";
 import IconCart from "../images/icon-cart.svg";
+import IconCreditCard from "../images/icon-credit-card.svg";
+import IconZelle from "../images/icon-zelle.png";
+import PicHats from "../images/pic-hats.png";
 ---
 
 <div class="wrap">
@@ -13,36 +16,73 @@ import IconCart from "../images/icon-cart.svg";
       </p>
     </div>
 
-    <div class="actions">
-      <div class="item">
-        <img src={IconHeart.src} class="icon">
+    <div class="body">
+      <div class="body-title">
+        <img src={IconHeart.src}>
+        <h2>Make a Donation</h2>
+      </div>
 
-        <div class="title">Make a Donation</div>
+      <div class="actions">
+        <div class="item">
+          <div class="item-title">
+            <img src={IconCreditCard.src}>
+            <span>Credit Card</span>
+          </div>
 
-        <p class="text-medium">
-          You will be redirected to a secure page hosted by Stripe.
-        </p>
+          <p class="text-medium">
+            You will be redirected to a secure page hosted by Stripe.
+          </p>
 
-        <div class="action">
-          <a href="https://stripe.com" class="button">
-            Click to Donate
-          </a>
+          <div class="action">
+            <a href="https://stripe.com" class="button">
+              Click to Donate
+            </a>
+          </div>
+        </div>
+
+        <div class="or text-medium">
+          or
+        </div>
+
+        <div class="item item-zelle">
+          <div>
+            <div class="item-title">
+              <img src={IconZelle.src} class="zelle-image">
+            </div>
+
+            <p class="text-medium">
+              Use the following email to send a donation via Zelle:
+            </p>
+          </div>
+
+          <div class="email">
+            friends4fitz@gmail.com
+          </div>
         </div>
       </div>
 
-      <div class="item">
-        <img src={IconCart.src} class="icon">
+      <hr class="hr">
 
-        <div class="title">Purchase a Hat</div>
+      <div class="body-title">
+        <img src={IconCart.src}>
+        <h2>Purchase a Hat</h2>
+      </div>
 
-        <p class="text-medium">
-          You will be redirected to a secure checkout page using Stripe.
-        </p>
+      <div class="item item-hat">
+        <div class="pic">
+          <img src={PicHats.src}>
+        </div>
 
-        <div class="action">
-          <a href="https://stripe.com" class="button">
-            Click to Make a Purchase
-          </a>
+        <div class="content">
+          <p class="text-medium">
+            You will be redirected to a secure checkout.
+          </p>
+
+          <div class="action">
+            <a href="https://stripe.com" class="button">
+              Click to Purchase
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -63,10 +103,38 @@ import IconCart from "../images/icon-cart.svg";
     max-width: 700px;
   }
 
+  .body-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .body-title h2 {
+    margin: 0;
+  }
+
   .item {
     background: #f9f9f9;
     padding: 32px;
     border-radius: 20px;
+  }
+
+  .item p {
+    max-width: 300px;
+    margin-bottom: 24px;
+  }
+
+  .item-title {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .item-title span {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
   }
 
   .title {
@@ -86,17 +154,66 @@ import IconCart from "../images/icon-cart.svg";
   }
 
   .actions {
-    display: inline-flex;
     flex-wrap: wrap;
-    gap: 64px;
+    gap: 16px;
+    display: inline-flex;
+    flex-direction: column;
   }
 
-  .actions p {
-    margin-bottom: 32px;
-    max-width: 322px;
+  .zelle-image {
+    width: 60px;
   }
 
-  .actions .text-medium {
-    line-height: 26px;
+  .email {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    padding-bottom: 8px
+  }
+
+  .item-zelle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .item-hat {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .item-hat img {
+    max-width: 100%;
+  }
+
+  .or {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 1000px) {
+    .actions {
+      flex-direction: row;
+      gap: 32px;
+    }
+
+    .or {
+      align-items: center;
+    }
+
+    .item-hat {
+      display: inline-flex;
+      flex-direction: row;
+      gap: 32px;
+    }
+
+    .item-hat img {
+      max-width: 150px;
+    }
+
+    .item-hat p {
+      max-width: 200px;
+    }
   }
 </style>
