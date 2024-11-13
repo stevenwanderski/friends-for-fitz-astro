@@ -1,0 +1,137 @@
+---
+import PicHats from "../images/pic-hats.jpg";
+---
+
+<div class="item item-hat">
+  <div class="pic">
+    <img src={PicHats.src}>
+  </div>
+
+  <div class="content">
+    <div class="options">
+      <span>Color:</span>
+
+      <select id="color">
+        <option value="green">Green</option>
+        <option value="gray">Gray</option>
+      </select>
+
+      <span>Delivery:</span>
+
+      <select id="delivery">
+        <option value="pickup">Local Pickup</option>
+        <option value="shipping">Ship to home</option>
+      </select>
+    </div>
+
+    <div class="action">
+      <a href="#" class="button" id="checkout-button">
+        Click to Purchase
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .item {
+    background: #f9f9f9;
+    padding: 32px;
+    border-radius: 20px;
+  }
+
+  .item-hat {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 250px;
+  }
+
+  .item-hat img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .options {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+    align-items: center;
+  }
+
+  .options span {
+    font-weight: 700;
+  }
+
+  .button {
+    background: var(--color-yellow);
+    color: var(--color-black);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .content {
+    /* max-width: 280px; */
+  }
+
+  select {
+    /* max-width: 150px; */
+    border-radius: 4px;
+    border: 1px solid #A5A5A5;
+    background: var(--color-white);
+    font-size: 16px;
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 1000px) {
+    .item-hat {
+      display: inline-flex;
+      flex-direction: row;
+      gap: 32px;
+      max-width: none;
+    }
+
+    .item-hat img {
+      max-width: 280px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .button {
+      width: auto;
+      text-align: left;
+    }
+  }
+</style>
+
+<script>
+  const button = document.getElementById('checkout-button');
+
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const color = document.getElementById('color').value;
+    const delivery = document.getElementById('delivery').value;
+
+    let href;
+
+    if (color === 'green' && delivery === 'pickup') {
+      href = 'https://buy.stripe.com/eVa5n4gpZ8X92R2fYZ';
+    } else if (color === 'green' && delivery === 'shipping') {
+      href = 'https://buy.stripe.com/7sI9Dkc9J8X9dvG7su';
+    } else if (color === 'gray' && delivery === 'pickup') {
+      href = 'https://buy.stripe.com/14k4j03Dd6P12R2fZ1';
+    } else if (color === 'gray' && delivery === 'shipping') {
+      href = 'https://buy.stripe.com/fZe02KflV7T5dvG28c';
+    }
+
+    window.location.href = href;
+  });
+</script>

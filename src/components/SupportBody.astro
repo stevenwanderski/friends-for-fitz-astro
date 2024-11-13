@@ -3,7 +3,7 @@ import IconHeart from "../images/icon-heart.svg";
 import IconCart from "../images/icon-cart.svg";
 import IconCreditCard from "../images/icon-credit-card.svg";
 import IconZelle from "../images/icon-zelle.png";
-import PicHats from "../images/pic-hats.png";
+import HatCheckout from "./HatCheckout.astro";
 ---
 
 <div class="wrap">
@@ -68,23 +68,7 @@ import PicHats from "../images/pic-hats.png";
         <h2>Purchase a Hat</h2>
       </div>
 
-      <div class="item item-hat">
-        <div class="pic">
-          <img src={PicHats.src}>
-        </div>
-
-        <div class="content">
-          <p class="text-medium">
-            You will be redirected to a secure checkout.
-          </p>
-
-          <div class="action">
-            <a href="https://stripe.com" class="button">
-              Click to Purchase
-            </a>
-          </div>
-        </div>
-      </div>
+      <HatCheckout />
     </div>
   </div>
 </div>
@@ -175,16 +159,6 @@ import PicHats from "../images/pic-hats.png";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-
-  .item-hat {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .item-hat img {
-    max-width: 100%;
   }
 
   .or {
