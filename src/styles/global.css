@@ -9,6 +9,7 @@
 :root {
   --color-green: #2DB150;
   --color-green-pale: #EAF7EE;
+  --color-green-medium: #BCE5C9;
   --color-yellow: #F7D167;
   --color-yellow-pale: #FEF9EB;
   --color-white: #FFFFFF;
@@ -63,10 +64,11 @@ h2 {
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
+  transition: background-color 300ms;
 }
 
 .button:hover {
-  text-decoration: underline;
+  cursor: pointer;
 }
 
 .container-inner {
