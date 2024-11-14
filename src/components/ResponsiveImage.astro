@@ -1,0 +1,12 @@
+---
+const { src, class: className } = Astro.props;
+---
+
+<img
+  class:list={ ['ix-embed-image', className] }
+  loading="lazy"
+  fetchpriority="high"
+  alt=""
+  srcset={`${src}?auto=format,compress&w=100 100w, ${src}?auto=format,compress&w=116 116w, ${src}?auto=format,compress&w=134 134w, ${src}?auto=format,compress&w=156 156w, ${src}?auto=format,compress&w=182 182w, ${src}?auto=format,compress&w=210 210w, ${src}?auto=format,compress&w=244 244w, ${src}?auto=format,compress&w=282 282w, ${src}?auto=format,compress&w=328 328w, ${src}?auto=format,compress&w=380 380w, ${src}?auto=format,compress&w=442 442w, ${src}?auto=format,compress&w=512 512w, ${src}?auto=format,compress&w=594 594w, ${src}?auto=format,compress&w=688 688w, ${src}?auto=format,compress&w=798 798w, ${src}?auto=format,compress&w=926 926w, ${src}?auto=format,compress&w=1074 1074w, ${src}?auto=format,compress&w=1246 1246w, ${src}?auto=format,compress&w=1446 1446w, ${src}?auto=format,compress&w=1678 1678w, ${src}?auto=format,compress&w=1946 1946w, ${src}?auto=format,compress&w=2258 2258w, ${src}?auto=format,compress&w=2618 2618w, ${src}?auto=format,compress&w=3038 3038w, ${src}?auto=format,compress&w=3524 3524w, ${src}?auto=format,compress&w=4088 4088w, ${src}?auto=format,compress&w=4742 4742w, ${src}?auto=format,compress&w=5500 5500w, ${src}?auto=format,compress&w=6380 6380w, ${src}?auto=format,compress&w=7400 7400w`}
+  src={`${src}?ixembed=1731612961409&auto=format,compress`}
+/>

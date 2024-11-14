@@ -1,3 +1,7 @@
+---
+import ResponsiveImage from "./ResponsiveImage.astro";
+---
+
 <div class="wrap">
   <div class="container-inner">
     <div class="main">
@@ -10,13 +14,7 @@
       </div>
 
       <div class="image-wrap">
-        <img
-          class="ix-embed-image image"
-          loading="lazy"
-          fetchpriority="high"
-          alt=""
-          src="https://happy-code.imgix.net/IMG_5528.JPEG?w=1000&fit=crop"
-        />
+        <ResponsiveImage src="https://happy-code.imgix.net/IMG_5528.JPEG" />
       </div>
     </div>
   </div>
@@ -44,7 +42,7 @@
     gap: 24px;
   }
 
-  .image {
+  .image-wrap :global(img) {
     width: 100%;
     max-width: 498px;
     border-radius: 20px;

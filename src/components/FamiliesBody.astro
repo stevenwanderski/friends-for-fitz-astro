@@ -1,3 +1,7 @@
+---
+import ResponsiveImage from "./ResponsiveImage.astro"
+---
+
 <div class="wrap">
   <div class="container-inner">
     <div class="main">
@@ -45,7 +49,7 @@
       </div>
 
       <div class="image-wrap">
-        <img src="https://happy-code.imgix.net/higgins-fam.jpg?auto=format,compress&w=498&h=472&fit=crop" alt="">
+        <ResponsiveImage src="https://happy-code.imgix.net/higgins-fam.jpg" />
       </div>
     </div>
   </div>
@@ -64,7 +68,7 @@
     padding: 72px 20px;
   }
 
-  .image-wrap img {
+  .image-wrap :global(img) {
     border-radius: 20px;
     max-width: 100%;
   }
