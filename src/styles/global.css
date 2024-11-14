@@ -71,6 +71,15 @@ h2 {
   cursor: pointer;
 }
 
+.button-yellow {
+  background: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.button-yellow:hover {
+  background-color: #ffe499;
+}
+
 .container-inner {
   max-width: 1200px;
   margin: 0 auto;
