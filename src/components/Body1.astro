@@ -1,4 +1,6 @@
 ---
+const { subheading, heading, body } = Astro.props;
+
 import ArrowButton from './ArrowButton.astro';
 import HeadingLabel from './HeadingLabel.astro';
 import ResponsiveImage from './ResponsiveImage.astro';
@@ -8,13 +10,11 @@ import ResponsiveImage from './ResponsiveImage.astro';
   <div class="container-inner">
     <div class="main">
       <div class="content">
-        <HeadingLabel text="Who We Are" />
+        <HeadingLabel text={subheading} />
 
-        <h2>We are a nonprofit created in memory of Bill Fitzgibbons.</h2>
+        <h2>{heading}</h2>
 
-        <p class="text-medium">
-          Established by friends and family, the nonprofit is dedicated to supporting local families facing hardships by providing various forms of assistance. Through events like our annual summer festival, we raise funds to make a positive impact in the lives of families who could use a helping hand.
-        </p>
+        <p class="text-medium">{body}</p>
 
         <ArrowButton text="Friends for Fitz Fest 2025" href="/events" />
       </div>

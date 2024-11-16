@@ -1,4 +1,6 @@
 ---
+const { title, description } = Astro.props;
+
 import SupportButton from "./SupportButton.astro";
 import Button from "./Button.astro";
 import ImageGrid from "../images/pic-hero-grid.png";
@@ -7,11 +9,9 @@ import ImageGrid from "../images/pic-hero-grid.png";
 <div class="outer">
   <div class="container-inner main">
     <div class="content">
-      <h1>Friends for Fitz provides help to families in need.</h1>
+      <h1>{title}</h1>
 
-      <p>
-        Every family deserves support in difficult times. Together, we can bring relief to families in our community. Join us in the cause today.
-      </p>
+      <p>{description}</p>
 
       <div class="actions">
         <SupportButton />

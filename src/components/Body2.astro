@@ -1,4 +1,6 @@
 ---
+const { subheading, heading, body } = Astro.props;
+
 import ArrowButton from './ArrowButton.astro';
 import HeadingLabel from './HeadingLabel.astro';
 import ResponsiveImage from './ResponsiveImage.astro';
@@ -8,13 +10,11 @@ import ResponsiveImage from './ResponsiveImage.astro';
   <div class="container-inner">
     <div class="main">
       <div class="content">
-        <HeadingLabel text="Families We've Helped" />
+        <HeadingLabel text={subheading} />
 
-        <h2>We have provided assistance to more than 10 local families this year.</h2>
+        <h2>{heading}</h2>
 
-        <p class="text-medium">
-          Friends for Fitz provides support to local families facing unexpected challenges. With the generosity of our community, we are able to step in and offer assistance during difficult times. Each family we help reflects our mission to bring stability and hope to those in need, and we are proud to make a difference, one family at a time.
-        </p>
+        <p class="text-medium">{body}</p>
 
         <ArrowButton text="Read the Higgins Family Story" href="/families" />
       </div>

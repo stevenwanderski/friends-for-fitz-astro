@@ -4,11 +4,27 @@ import Hero from '../components/Hero.astro';
 import Body1 from '../components/Body1.astro';
 import Body2 from '../components/Body2.astro';
 import DonateCta from '../components/DonateCta.astro';
+import fetchApi from '../lib/strapi';
+
+const response = await fetchApi({ endpoint: 'homepage' });
+
+const heroTitle = response['hero']['title'];
+const heroDescription = response['hero']['description'];
+const body1SubHeading = response['body1']['sub_heading'];
+const body1Heading = response['body1']['heading'];
+const body1Body = response['body1']['body'];
+const body2SubHeading = response['body2']['sub_heading'];
+const body2Heading = response['body2']['heading'];
+const body2Body = response['body2']['body'];
 ---
 
 <Layout title="Helping Families in Need">
-	<Hero />
-	<Body1 />
-	<Body2 />
+	<Hero
+		title={heroTitle}
+		description={heroDescription}
+	/>
+
+	<Body1 subheading={body1SubHeading} heading={body1Heading} body={body1Body} />
+	<Body2 subheading={body2SubHeading} heading={body2Heading} body={body2Body} />
 	<DonateCta />
 </Layout>
